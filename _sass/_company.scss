@@ -42,9 +42,9 @@
   }
 
   &__logo {
-    height: 60px;
+    height: 64px;
     width: auto;
-    margin: 4px 16px;
+    margin: 16px 16px;
 
     @include mobile {
       margin-left: 16px;
@@ -65,16 +65,15 @@
     }
 
     button{
-      font-size: 14px;
+      font-size: 16px;
       font-family: Roboto, sans-serif;
       border: none;
       height: 100%;
       margin: 0;
       cursor: pointer;
       padding: 8px 16px;
-      border-radius: 64px;
       transition: .1s;
-      color: $blue500;
+      color: $primary-color;
       text-transform: uppercase;
 
       &:hover {
@@ -88,12 +87,12 @@
       }
 
       &.company-button {
-        background: $blue500;
+        background: $primary-color;
         color: white;
       }
 
       &.candidate-button {
-        background: $deep-orange400;
+        background: $primary-color;
         color: white;
       }
     }
@@ -102,23 +101,32 @@
 
 .company__section--1{
   margin-top: 64px;
-  background: $blue500;
+  background: $primary-color;
   -webkit-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
   -moz-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
   box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
+  position: relative;
 
   & .container {
-    display: flex;
-    flex-flow: row wrap;
+    height: 600px;
   }
 
   &__text{
-    flex-shrink: 6;
-    flex-basis: 55%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: 2;
+
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
     justify-content: space-evenly;
+
+    padding: 0 256px;
 
     @include mobile {
       flex-basis: 100%;
@@ -126,14 +134,15 @@
 
     h1 {
       font-family: Gidolinya, sans-serif;
-      font-size: 64px;
-      line-height: 64px;
+      font-size: 48px;
+      line-height: 48px;
       text-transform: uppercase;
       color: white;
+      text-align: center;
 
       @include mobile {
-        font-size: 48px;
-        line-height: 48px;
+        font-size: 32px;
+        line-height: 32px;
         text-align: center;
       }
     }
@@ -192,7 +201,7 @@
         padding: 32px 64px;
         cursor: pointer;
         transition: .3s;
-        color: $blue500;
+        color: $primary-color;
 
         &:hover {
           -webkit-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.5);
@@ -204,187 +213,36 @@
     }
   }
 
-  &__image{
-    flex-shrink: 4;
-    flex-basis: 45%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-flow: row nowrap;
+  &__img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 
-    @include mobile {
-      justify-content: center;
-      flex-basis: 100%;
-    }
+    z-index: 1;
 
-    &__card{
-      background: white;
-      display: flex;
-      flex-flow: column nowrap;
-      align-items: center;
-      justify-content: flex-start;
-      padding: 16px;
-      margin-left: 16px;
-      margin-bottom: 32px;
-      transition: .3s;
-      border-radius: 16px;
-      flex-basis: 200px;
+    opacity: 0.8;
 
-      &:last-child {
-        @include mobile {
-          display: none;
-        }
-      }
-
-      @include tablet {
-        flex-basis: 80%;
-        margin-right: 16px;
-      }
-
-      &:hover {
-        -webkit-box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.3);
-        -moz-box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.3);
-        box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.3);
-        transform: scale(1.03);
-      }
-
-      h2 {
-        line-height: 18px;
-        font-size: 18px;
-        font-family: Roboto, sans-serif;
-        font-weight: 300;
-        height: 16px;
-        margin: 16px 0 0 0;
-      }
-
-      ul {
-        padding: 0;
-
-        li {
-          list-style: none;
-          font-size: 14px;
-          padding: 0;
-          padding-top: 4px;
-          padding-bottom: 4px;
-
-          &:nth-child(1) {
-            border-bottom: 1px solid lightgrey;
-          }
-
-          &:nth-child(2) {
-            padding-top: 8px;
-          }
-
-          &:last-child {
-            padding-bottom: 0;
-          }
-
-          &::before {
-            display: inline-block;
-            vertical-align: middle;
-            margin-right: 16px;
-          }
-
-          &:nth-child(1)::before { content: url('https://empreguei.github.io/assets/svg/education.svg') }
-          &:nth-child(2)::before { content: url('https://empreguei.github.io/assets/svg/mail.svg') }
-          &:nth-child(3)::before { content: url('https://empreguei.github.io/assets/svg/phone.svg') }
-          &:nth-child(4)::before { content: url('https://empreguei.github.io/assets/svg/money.svg') }
-          &:nth-child(5)::before { content: url('https://empreguei.github.io/assets/svg/tie.svg') }
-          &:nth-child(6)::before { content: url('https://empreguei.github.io/assets/svg/party.svg') }
-          &:nth-child(7)::before { content: url('https://empreguei.github.io/assets/svg/distance.svg') }
-          &:nth-child(8)::before { content: url('https://empreguei.github.io/assets/svg/bike.svg') }
-        }
-      }
-
-      img {
-        align-self: center;
-        width: 100px;
-        height: 100px;
-        border-radius: 50px;
-        object-fit: cover;
-        object-position: top center;
-      }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
     }
   }
 }
 
 .company__section--2{
-  h1 {
-    text-align: center;
-  }
-
-  &__client-list {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    padding: 0px 64px;
-
-    &__client {
-      padding: 16px;
-      width: 200px;
-      height: 200px;
-      border: 1px $blue500 solid;
-      margin: 32px 16px;
-      border-radius: 100px;
-      transition: .5s;
-
-      &:hover {
-        -webkit-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.5);
-        -moz-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.5);
-        box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.5);
-        transform: scale(1.03);
-      }
-
-      &:nth-child(1) {
-        padding: 40px;
-      }
-      &:nth-child(3) {
-        padding: 40px;
-      }
-      &:nth-child(4) {
-        padding: 0px;
-      }
-      &:nth-child(5) {
-        padding: 40px;
-      }
-      &:nth-child(7) {
-        padding: 32px;
-      }
-
-      img {
-
-        width: 100%;
-        height: 100%;
-
-        object-fit: contain;
-        object-position: center;
-
-        transition: .3s;
-
-      }
-    }
-  }
-}
-
-.company__section--3{
-  margin-top: 64px;
-  padding-bottom: 64px;
-  background: $grey100;
-  -webkit-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
-  -moz-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
-  box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
-
-  & .container {
-    display: flex;
-    flex-flow: row wrap;
-  }
+  display: flex;
+  flex-flow: row wrap;
 
   &__text{
     flex-shrink: 6;
     flex-basis: 55%;
     display: flex;
     flex-flow: column nowrap;
-    align-items: flex-start;
+    align-items: flex-end;
     justify-content: center;
 
     @include mobile {
@@ -394,7 +252,8 @@
     h1 {
       font-family: Gidolinya, sans-serif;
       line-height: 64px;
-      color: $grey800;
+      text-align: right;
+      align-self: center;
 
       @include mobile {
         text-align: center;
@@ -452,7 +311,129 @@
         padding: 32px 64px;
         cursor: pointer;
         transition: .3s;
-        color: $blue500;
+        color: $primary-color;
+
+        &:hover {
+          -webkit-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.5);
+          -moz-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.5);
+          box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.5);
+          transform: scale(1.03);
+        }
+      }
+    }
+  }
+
+  &__image{
+    flex-shrink: 4;
+    flex-basis: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @include mobile {
+      justify-content: center;
+    }
+
+    img {
+      width: 90%;
+      height: 90%;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    @include mobile {
+      flex-basis: 100%;
+    }
+  }
+}
+
+.company__section--3{
+  margin-top: 64px;
+  padding-bottom: 64px;
+  background: $grey--100;
+  -webkit-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
+
+  & .container {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  &__text{
+    flex-shrink: 6;
+    flex-basis: 55%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: center;
+
+    @include mobile {
+      flex-basis: 100%;
+    }
+
+    h1 {
+      font-family: Gidolinya, sans-serif;
+      line-height: 64px;
+      align-self: center;
+
+      @include mobile {
+        text-align: center;
+      }
+    }
+
+    ul {
+      font-size: 24px;
+
+      @include mobile {
+        margin: 32px;
+      }
+
+      li {
+        letter-spacing: 1px;
+        margin-top: 16px;
+        padding: 0;
+        list-style: none;
+
+        &::before {
+          display: inline-block;
+          vertical-align: middle;
+          margin-right: 16px;
+        }
+      }
+
+      & li:nth-child(1)::before {
+        content: url("https://empreguei.github.io/assets/svg/coin.svg");
+      }
+      & li:nth-child(2)::before {
+        content: url("https://empreguei.github.io/assets/svg/no-cv.svg");
+      }
+      & li:nth-child(3)::before {
+        content: url("https://empreguei.github.io/assets/svg/hand-shake--money.svg");
+      }
+      & li:nth-child(4)::before {
+        content: url("https://empreguei.github.io/assets/svg/person--ok.svg");
+      }
+      & li:nth-child(5)::before {
+        content: url("https://empreguei.github.io/assets/svg/building--briefcase.svg");
+      }
+
+    }
+
+    a {
+      align-self: center;
+      margin: 64px;
+
+      button {
+        border-radius: 64px;
+        border: none;
+        background: white;
+        font-size: 24px;
+        text-transform: uppercase;
+        padding: 32px 64px;
+        cursor: pointer;
+        transition: .3s;
+        color: $primary-color;
 
         &:hover {
           -webkit-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.5);
@@ -489,235 +470,214 @@
 }
 
 .company__section--4{
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  padding-top: 64px;
-  padding-bottom: 128px;
-
-  h1 {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 32px;
-  }
-
-  &__feature {
-    text-align: center;
-    flex-basis: 25%;
-    transition: .3s;
-
-    &:hover {
-      transform: scale(1.05)
-    }
-
-    @include tablet {
-      flex-basis: 50%;
-    }
-
-    img {
-      width: 128px;
-      height: 128px;
-    }
-
-    p {
-      padding: 16px;
-      color: $grey800;
-      text-align: center;
-      font-weight: 300;
-      font-size: 24px;
-    }
-  }
-}
-
-.company__section--5{
+  margin-top: 4px;
+  padding-bottom: 64px;
+  background: $primary-color;
   -webkit-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
   -moz-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
   box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
 
-  .container {
+  & * {
+    color: $text--on-color;
+  }
+
+  & .container {
     display: flex;
-    justify-content: center;
     flex-flow: row wrap;
-    align-items: center;
   }
 
-  &__video {
-    flex-basis: 50%;
-  }
+  &__text{
+    flex-shrink: 6;
+    flex-basis: 55%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: center;
 
-  &__text {
-    flex-basis: 50%;
+    @include mobile {
+      flex-basis: 100%;
+    }
+
+    h1 {
+      font-family: Gidolinya, sans-serif;
+      line-height: 64px;
+      align-self: center;
+
+      @include mobile {
+        text-align: center;
+      }
+    }
+
+    ul {
+      font-size: 24px;
+
+      @include mobile {
+        margin: 32px;
+      }
+
+      li {
+        letter-spacing: 1px;
+        margin-top: 16px;
+        padding: 0;
+        list-style: none;
+
+        &::before {
+          display: inline-block;
+          vertical-align: middle;
+          margin-right: 16px;
+        }
+      }
+
+      & li:nth-child(1)::before {
+        content: url("https://empreguei.github.io/assets/svg/person--ok.svg");
+      }
+      & li:nth-child(2)::before {
+        content: url("https://empreguei.github.io/assets/svg/building--briefcase.svg");
+      }
+      & li:nth-child(3)::before {
+        content: url("https://empreguei.github.io/assets/svg/building--briefcase.svg");
+      }
+      & li:nth-child(4)::before {
+        content: url("https://empreguei.github.io/assets/svg/building--briefcase.svg");
+      }
+      & li:nth-child(5)::before {
+        content: url("https://empreguei.github.io/assets/svg/building--briefcase.svg");
+      }
+
+    }
 
     a {
-      text-align: center;
-      width: 100%;
-      display: block;
+      align-self: center;
+      margin: 64px;
 
       button {
-        background: $blue500;
-        font-size: 18px;
-        padding: 16px 32px;
         border-radius: 64px;
         border: none;
-        color: white;
+        background: white;
+        font-size: 24px;
         text-transform: uppercase;
-        margin: 32px;
-        transition: .3s;
+        padding: 32px 64px;
         cursor: pointer;
+        transition: .3s;
+        color: $primary-color;
 
         &:hover {
-          -webkit-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
-          -moz-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
-          box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
+          -webkit-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.5);
+          -moz-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.5);
+          box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.5);
           transform: scale(1.03);
         }
       }
     }
   }
+
+  &__image{
+    flex-shrink: 4;
+    flex-basis: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @include mobile {
+      justify-content: center;
+    }
+
+    img {
+      width: 90%;
+      height: 90%;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    @include mobile {
+      flex-basis: 100%;
+    }
+  }
+}
+
+.company__section--5{
+  position: relative;
+  height: 500px;
+  background: $primary-color;
+  margin-top: 4px;
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: 1;
+
+    opacity: 0.8;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .button {
+    font-size: 24px;
+    text-transform: uppercase;
+    background: $primary-color;
+    z-index: 2;
+    position: absolute;
+    padding: 32px;
+    color: $text--on-color;
+    top: 50%;
+    transform: scale(1) translateY(-50%) translateX(-50%);
+    transform-origin: center;
+    transition: .1s;
+    left: 50%;
+
+    &:hover {
+      -webkit-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
+      -moz-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
+      box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
+
+      transform: scale(1.01) translateY(-50%) translateX(-50%);
+    }
+  }
 }
 
 .company__section--6{
-  margin-top: 64px;
+  background: $grey--300;
 
-  h1, h2 {
-    text-align: center;
-    line-height: 1em;
+  .container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
   }
 
-  &__plans {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
+  &__left {
+    ul {
+      list-style: none;
+      text-align: left;
+      margin-bottom: 32px;
 
-    &__plan {
-      padding: 16px;
-      margin: 16px;
-      transition: .3s;
-      border: 1px solid $grey100;
-      position: relative;
-      width: 350px;
-      max-width: 90%;
-
-
-      &:hover{
-        -webkit-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
-        -moz-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
-        box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
-        border: 1px solid $blue500;
-        transform: scale(1.03);
+      li {
+        margin-top: 16px;
+        margin-left: -32px;
       }
+    }
+  }
 
-      h2 {
-        line-height: 32px;
-        margin: 8px;
-        padding: 0;
-      }
+  &__right {
+    h1 {
+      text-align: right;
+    }
 
-      &--featured h2 {
-        color: $green700;
-      }
+    ul {
+      list-style: none;
+      text-align: right;
+      margin-bottom: 32px;
 
-      &__description {
-        text-align: center;
-      }
-
-      &--featured &__description {
-        color: $green500;
-      }
-
-      &__name {
-        text-align: center;
-        padding: 16px;
-        text-transform: uppercase;
-        font-size: 14px;
-        font-weight: bold;
-      }
-
-      &--featured &__name {
-        color: $blue500;
-      }
-
-      &__price {
-        font-size: 42px;
-        font-weight: bold;
-        text-align: center;
-        font-family: Gidolinya, sans-serif;
-      }
-
-      &--featured &__price {
-        color: $green500;
-      }
-
-      &__features {
-        padding: 32px 16px;
-
-        li.item {
-          list-style: none;
-          margin-bottom: 8px;
-
-          &::before {
-            display: inline-block;
-            vertical-align: middle;
-            margin-right: 16px;
-            content: url('https://empreguei.github.io/assets/svg/allowed.svg');
-          }
-
-          &--denied {
-            list-style: none;
-
-            &::before {
-              display: inline-block;
-              vertical-align: middle;
-              margin-right: 16px;
-              content: url('https://empreguei.github.io/assets/svg/denied.svg');
-            }
-          }
-        }
-      }
-
-      a {
-
-        button {
-          background: $blue500;
-          padding: 16px 32px;
-          border-radius: 64px;
-          color: white;
-          text-transform: uppercase;
-          font-size: 16px;
-          width: 100%;
-          border: none;
-          transition: .3s;
-          cursor: pointer;
-
-          &:hover {
-            -webkit-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
-            -moz-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
-            box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
-            transform: scale(1.03);
-          }
-        }
-      }
-
-      &--featured a button {
-        background: $green500;
-      }
-
-      &--featured:after {
-        content: 'Mais Popular';
-        position: absolute;
-        top: -8px;
-        right: -16px;
-        z-index: 2;
-        text-transform: uppercase;
-        font-size: 12px;
-        font-weight: bold;
-        background: $orange500;
-        color: white;
-        padding: 8px;
-        -webkit-box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.3);
-        -moz-box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.3);
-        box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.3);
+      li {
+        margin-top: 16px;
       }
     }
   }
@@ -729,7 +689,7 @@
   -webkit-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
   -moz-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
   box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
-  background: $grey50;
+  background: $grey--100;
 
   h1 {
     text-align: center;
@@ -747,7 +707,7 @@
       align-items: center;
       flex-flow: column nowrap;
       transition: .3s;
-      border: 1px solid $grey100;
+      border: 1px solid $grey--100;
       padding: 16px;
       background: white;
       flex-basis: 20%;
@@ -765,7 +725,7 @@
         -webkit-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
         -moz-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
         box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
-        border: 1px solid $blue500;
+        border: 1px solid $primary-color;
         transform: scale(1.03);
       }
 
@@ -780,7 +740,7 @@
       a {
 
         button {
-          background: $blue500;
+          background: $primary-color;
           padding: 16px 32px;
           border-radius: 64px;
           color: white;
@@ -805,7 +765,7 @@
 
 .footer{
   margin-top: 4px;
-  background: $grey100;
+  background: $grey--100;
 
   .container {
     display: flex;
@@ -853,7 +813,7 @@
       a {
         button {
           border: none;
-          background: $grey100;
+          background: $grey--100;
           padding: 8px 0;
           cursor: pointer;
           font-size: 16px;

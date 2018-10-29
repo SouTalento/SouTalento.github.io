@@ -74,7 +74,7 @@
             padding: 8px 16px;
             border-radius: 64px;
             transition: .1s;
-            color: $deep-orange400;
+            color: $text;
             text-transform: uppercase;
 
             &:hover {
@@ -88,12 +88,12 @@
             }
 
             &.candidate-button {
-                background: $deep-orange400;
+                background: $primary-color;
                 color: white;
             }
 
             &.company-button {
-                background: $blue500;
+                background: $primary-color;
                 color: white;
             }
         }
@@ -102,7 +102,7 @@
 
 .candidate__section--1{
     margin-top: 64px;
-    background: $deep-orange400;
+    background: $primary-color;
     -webkit-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
     -moz-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
     box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
@@ -192,7 +192,7 @@
                 padding: 32px 64px;
                 cursor: pointer;
                 transition: .3s;
-                color: $deep-orange400;
+                color: $primary-color;
 
                 &:hover {
                     -webkit-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.5);
@@ -245,7 +245,7 @@
             padding: 16px;
             width: 200px;
             height: 200px;
-            border: 1px $deep-orange400 solid;
+            border: 1px $primary-color solid;
             margin: 32px 16px;
             border-radius: 100px;
             transition: .5s;
@@ -291,7 +291,7 @@
 .candidate__section--3{
     margin-top: 64px;
     padding-bottom: 64px;
-    background: $grey100;
+    background: $grey--100;
     -webkit-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
     -moz-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
     box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
@@ -316,7 +316,6 @@
         h1 {
             font-family: Gidolinya, sans-serif;
             line-height: 64px;
-            color: $grey800;
 
             @include mobile {
                 text-align: center;
@@ -349,7 +348,7 @@
                 padding: 32px 64px;
                 cursor: pointer;
                 transition: .3s;
-                color: $deep-orange400;
+                color: $primary-color;
 
                 &:hover {
                     -webkit-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.5);
@@ -423,7 +422,6 @@
 
         p {
             padding: 16px;
-            color: $grey800;
             text-align: center;
             font-weight: 300;
             font-size: 24px;
@@ -432,7 +430,7 @@
 }
 
 .candidate__section--5{
-    background: $grey100;
+    background: $grey--100;
     -webkit-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
     -moz-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
     box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
@@ -463,7 +461,7 @@
             display: block;
 
             button {
-                background: $deep-orange400;
+                background: $primary-color;
                 font-size: 18px;
                 padding: 16px 32px;
                 border-radius: 64px;
@@ -535,7 +533,7 @@
                 font-size: 16px;
                 text-transform: uppercase;
                 cursor: pointer;
-                background: $deep-orange400;
+                background: $primary-color;
                 border: none;
                 color: white;
                 width: 80%;
@@ -560,7 +558,7 @@
     -webkit-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
     -moz-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
     box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
-    background: $grey50;
+    background: $grey--100;
 
     h1 {
         text-align: center;
@@ -578,7 +576,7 @@
             align-items: center;
             flex-flow: column nowrap;
             transition: .3s;
-            border: 1px solid $grey100;
+            border: 1px solid $grey--100;
             padding: 16px;
             background: white;
             flex-basis: 20%;
@@ -596,7 +594,7 @@
                 -webkit-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
                 -moz-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
                 box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.3);
-                border: 1px solid $deep-orange400;
+                border: 1px solid $primary-color;
                 transform: scale(1.03);
             }
 
@@ -611,7 +609,7 @@
             a {
 
                 button {
-                    background: $deep-orange400;
+                    background: $primary-color;
                     padding: 16px 32px;
                     border-radius: 64px;
                     color: white;
@@ -636,7 +634,7 @@
 
 .footer{
     margin-top: 4px;
-    background: $grey100;
+    background: $grey--100;
 
     .container {
         display: flex;
@@ -684,7 +682,7 @@
             a {
                 button {
                     border: none;
-                    background: $grey100;
+                    background: $grey--100;
                     padding: 8px 0;
                     cursor: pointer;
                     font-size: 16px;

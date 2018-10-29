@@ -1,19 +1,7 @@
-.text-color {
-    &--yellow {
-        &--200 {
-            color: $yellow200;
-        }
-    }
+.text {
+    color: $text;
 
-    &--blue {
-        &--500 {
-            color: $blue500;
-        }
-    }
-
-    &--deep-orange {
-        &--500 {
-            color: $orange500;
-        }
+    &--on-color {
+        color: $text--on-color;
     }
 }

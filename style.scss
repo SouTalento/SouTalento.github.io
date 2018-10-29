@@ -23,10 +23,10 @@ html {
 }
 
 body {
-    background: $white;
+    background: white;
     font: 18px/1.4;
     font-family: Roboto;
-    color: $darkGray;
+    color: $text;
 }
 
 .container {
@@ -42,7 +42,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Gidolinya, $helveticaNeue;
-  color: $darkerGray;
+  color: $text;
   font-weight: bold;
 
   line-height: 1.7;
@@ -71,7 +71,6 @@ h3 {
 
 h4 {
   font-size: 18px;
-  color: $gray;
 }
 
 p {
@@ -127,17 +126,17 @@ img {
 
 .date {
   font-style: italic;
-  color: $gray;
+  color: $text;
 }
 
 // Specify the color of the selection
 ::-moz-selection {
-  color: $black;
-  background: $lightGray;
+  color: $text;
+  background: $secondary-color;
 }
 ::selection {
-  color: $black;
-  background: $lightGray;
+  color: $text;
+  background: $secondary-color;
 }
 
 // Nicolas Gallagher's micro clearfix hack

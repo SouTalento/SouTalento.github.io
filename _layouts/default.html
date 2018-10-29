@@ -1,46 +1,179 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
     {% include meta.html %}
 
     <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <link rel="stylesheet" type="text/css" href="/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
+    <!-- Fonts -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
-  </head>
 
-  <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix" style="background: #FF8A65">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
-        </header>
-      </div>
-    </div>
-
-    <div id="main" role="main" class="container">
-      {{ content }}
-    </div>
-
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
-      </div>
-    </div>
-
+    {% include jquery.html %}
     {% include analytics.html %}
-  </body>
+
+</head>
+
+<body>
+<div class="container--fluid clearfix">
+    <header class="header--company">
+
+        <div class="header--company__left-side">
+            <button class="header--company__hamburger"><i class="fa fa-bars"></i></button>
+            <a href="{{ site.url }}/"><img src="{{ site.baseurl }}/assets/img/sou-talento.png" class="header--company__logo"/></a>
+        </div>
+
+        <nav class="header--company__navigation">
+            {% include navigation.html company=true %}
+        </nav>
+
+    </header>
+</div>
+
+<section class="container--fluid company__section--1" id="a-empreguei">
+    <div class="container clearfix">
+        <div class="company__section--1__img">
+            <img src="http://placeimg.com/2000/600/any" />
+        </div>
+
+        <div class="company__section--1__text">
+            <h1>Monte sua máquina de vendas com os 5% melhores talentos</h1>
+        </div>
+
+    </div>
+</section>
+
+<section class="container clearfix company__section--2" id="para-as-empresas">
+
+    <div class="company__section--2__image">
+        <img src="{{ site.baseurl }}/assets/svg/flying-money.svg" />
+    </div>
+
+    <div class="clearfix company__section--2__text" >
+        <h1>Para as Empresas</h1>
+
+        <ul>
+            <li>Nossa plataforma faz 80% do serviço de recrutamento para você</li>
+            <li>Todos os candidatos passam por diversos testes e entrevistas</li>
+            <li>Chame os 3 melhores para a entrevista final</li>
+        </ul>
+    </div>
+
+</section>
+
+<section class="container--fluid company__section--3" id="para-os-talentos">
+    <div class="container clearfix">
+        <div class="company__section--3__text">
+            <h1>Para os Talentos</h1>
+
+            <ul>
+                <li>Crie seu perfil 100% grátis e fique visível para as melhores empresas do mercado</li>
+                <li>Todas as empresas e vagas são analisadas por nós antes de você agendar sua entrevista</li>
+                <li>Trabalhe na empresa e setor que você mais gostar, sem perder tempo com oportunidades erradas</li>
+            </ul>
+
+        </div>
+
+        <div class="company__section--3__image">
+            <img src="{{ site.baseurl }}/assets/svg/flying-money.svg" />
+        </div>
+    </div>
+</section>
+
+<section class="container--fluid company__section--4" id="sobre-nos">
+    <div class="container clearfix">
+        <div class="company__section--4__text">
+            <h1>Sobre Nós</h1>
+
+            <ul>
+                <li>
+                    Sabemos o quão importante para a longevidade de sua empresa é uma máquina de vendas que performe com excelência
+                </li>
+                <li>
+                    Nós temos +10 anos de experiência no recrutamento de profissionais para Máquina de Vendas
+                </li>
+                <li>
+                    Todos os talentos com foto e vídeo entrevista já prontos para sua avaliação
+                </li>
+                <li>
+                    Monte sua máquina de vendas e já prepare o plano de carreiras de sua empresa conosco
+                </li>
+                <li>
+                    Pessoas + Processos + Tecnologia
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="company__section--4__image">
+            <img src="{{ site.baseurl }}/assets/svg/flying-money.svg" />
+        </div>
+    </div>
+</section>
+
+<section class="container--fluid company__section--5" id="baixe-o-app">
+
+    <div class="company__section--5__img">
+        <img src="http://placeimg.com/2000/600/any" />
+    </div>
+
+    <a class="button shadow" href="#">Começar Já!</a>
+
+</section>
+
+<section class="container--fluid company__section--6" id="maquina-de-vendas">
+
+    <div class="container clearfix">
+
+        <div class="company__section--6__left">
+            <h1>Máquina de Vendas</h1>
+
+            <ul>
+                <li>Lead Generator (Nome)</li>
+                <li>Qualificador (SRD)</li>
+                <li>Account Executive (Closer)</li>
+                <li>Customer Success</li>
+                <li>Inside Sales</li>
+                <li>Field Sales</li>
+            </ul>
+        </div>
+
+        <div class="company__section--6__right">
+            <h1>Finance</h1>
+
+            <ul>
+                <li>Analista Financeiro</li>
+                <li>Planejamento Financeiro</li>
+                <li>Tesoureiro</li>
+                <li>Coordenador de Tesouraria</li>
+                <li>Gerente Financeiro</li>
+            </ul>
+        </div>
+
+    </div>
+
+</section>
+
+{% include footer.html company=false %}
+
+<script>
+
+    $('.header--company__hamburger').click(function(){
+        $('.header--company nav').slideToggle(100);
+    });
+
+
+</script>
+
+</body>
 </html>
